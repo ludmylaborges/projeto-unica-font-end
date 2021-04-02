@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<title>Cadastro</title>
+        <meta charset="utf-8" />  
+        <link rel="stylesheet" href="css/style_cadastro.css"> 
+		<script src="index.js"></script>
+	</head>
+
+	<body>
+
+		<h1>Formulário para inscrição</h1>
+		<a href="#" onclick="selectType('f')">Cadastrar pessoa fisica</a><br/>
+		<a href="#" onclick="selectType('j')">Cadastrar pessoa juridica</a>
+		<div id="fisica" style="display: none;">
+		<h2>Cadastrar pessoa física</h2>
+		<form>
+            Nome:<br />
+			<input type="text" name="nome" onblur="validarnome(this)" /><br />
+            
+            Sobrenome:<br />
+			<input type="text" name="sobrenome" onblur="validarsobrenome(this)" /><br />
+            
+			CPF:<br />
+            <input type="text" name="cpf" onblur="validarCPF(this)" /><br /> 
+
+            Email:<br />
+            <input type="text" name="email" onblur="validaremail(this)"/><br /> 
+
+            Telefone:<br />
+            <input type="text" name="telefone" onblur="validartelefone(this)"/><br /><br /> 
+            
+            Data de nascimento:<br />
+            <input type="date" name="data"><br /><br />
+              
+			Sexo:<br />
+			<input type="radio" name="sexo" />Masculino<br />
+			<input type="radio" name="sexo" />Feminino<br /><br />
+            
+			Cidade:<br />
+			<select>
+				<option>Salvador</option>
+				<option>São Paulo</option>
+				<option>Rio de Janeiro</option><br />
+			</select>
+			<br /><br />
+
+			<input type="submit" value="Salvar" />
+		</form>
+	</div>
+
+	<div id="juridica" style="display: none;">	
+		<h2>Cadastrar pessoa jurídica</h2>
+		<form>
+			Nome fantasia:<br />
+			<input type="text" name="nome_j" onblur="validarnome_j(this)"/><br />
+           
+			CNPJ:<br />
+            <input type="text" name="cnpj" onblur="validarcnpj(this)"/><br /> 
+          
+			Email:<br />
+            <input type="text" name="email_j" onblur="validaremail_j(this)"/><br /> 
+
+            Telefone:<br />
+            <input type="text" name="telefone_j" onblur="validartelefone_j(this)"/><br /><br /> 
+
+			Cidade:<br />
+			<select>
+				<option>Salvador</option>
+				<option>São Paulo</option>
+				<option>Rio de Janeiro</option><br />
+			</select>
+			<br /><br />
+              
+            <input type="submit" value="Salvar" />
+		</form>
+	</div>
+	</body>
+</html>
